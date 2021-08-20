@@ -1,0 +1,87 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid $gray;
+  .wrap--heading {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+  }
+  &__logo {
+    cursor: pointer;
+  }
+  &__navigation {
+    &--WrapItem {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 25px;
+      font-weight: 600;
+      color: $black;
+      margin-right: 180px;
+      li:first-child a,
+      li:hover > a {
+        color: $blue;
+      }
+
+      a {
+        color: $black;
+      }
+    }
+  }
+  &__iconShortCut {
+    display: flex;
+    justify-content: center;
+    gap: 0 25px;
+    align-items: center;
+    .anticon-search {
+      font-size: 19px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .anticon-shopping-cart {
+      font-size: 32px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .ant-avatar-icon:hover {
+      cursor: pointer;
+    }
+    .btn--cancelFormSearch {
+      font-size: 40px;
+      font-weight: 400;
+      color: $blue;
+      margin-bottom: 5px;
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+  .container__search {
+    width: 1090px;
+    position: relative;
+    transition: all 0.5s ease-in;
+    opacity: 1;
+    &--input {
+      width: 100%;
+      padding: 15px 60px 15px 30px;
+      border-radius: 31px;
+    }
+    &--icon {
+      font-size: 19px;
+      position: absolute;
+      top: 50%;
+      right: 13px;
+      transform: translateY(-50%);
+      padding: 15px;
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
+  }
+}
