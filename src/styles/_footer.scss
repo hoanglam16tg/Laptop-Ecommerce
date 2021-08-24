@@ -2,6 +2,7 @@
   width: 100%;
   background-color: black;
   color: white;
+
   &__SignUpNews {
     @include flexCenter;
     padding-top: 85px;
@@ -49,6 +50,11 @@
     }
     p {
       margin-bottom: 2em;
+      transition: all 0.2s ease-in;
+    }
+    p:hover {
+      cursor: pointer;
+      color: $gray;
     }
   }
 
@@ -60,6 +66,12 @@
       font-size: 24px;
       .iconFacebook {
         margin-right: 12px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .iconInstagram:hover {
+        cursor: pointer;
       }
     }
     &--pay {

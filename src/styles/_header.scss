@@ -33,6 +33,7 @@
     justify-content: center;
     gap: 0 25px;
     align-items: center;
+    position: relative;
     .anticon-search {
       font-size: 19px;
       &:hover {
@@ -49,15 +50,8 @@
       cursor: pointer;
     }
     .btn--cancelFormSearch {
-      font-size: 40px;
-      font-weight: 400;
+      font-size: 25px;
       color: $blue;
-      margin-bottom: 5px;
-      transition: all 0.3s;
-      &:hover {
-        cursor: pointer;
-        opacity: 0.7;
-      }
     }
   }
   .container__search {
@@ -81,6 +75,112 @@
       &:hover {
         cursor: pointer;
         font-size: 24px;
+      }
+    }
+  }
+}
+.miniCard {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.14);
+  background-color: rgb(255, 255, 255);
+
+  &__title {
+    @include flexCenter;
+    flex-direction: column;
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 18px;
+      color: $gray;
+    }
+    .btn--viewCard {
+      width: 250px;
+      height: 37px;
+      border-radius: 50px;
+      margin: 15px 0 20px 0;
+      border: 2px solid $blue;
+      span {
+        color: $blue;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+  &__listProduct {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    &--item {
+      display: flex;
+      gap: 0 5px;
+      margin: 20px 0;
+      .itemMiniCard--quantity {
+        @include flexCenter;
+        font-size: 18px;
+      }
+      .itemMiniCard--image {
+        @include flexCenter;
+        max-width: 65px;
+      }
+      .itemMiniCard--info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        font-size: 13px;
+        font-weight: 400;
+      }
+      .itemMiniCard--btn {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        span {
+          margin-bottom: 8px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__payBill {
+    @include flexCenter;
+    flex-direction: column;
+    margin-top: 17px;
+    &--Subtotal {
+      h3 {
+        color: $gray-dash;
+        font-weight: 600;
+        line-height: 140%;
+      }
+      span {
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 140%;
+      }
+    }
+
+    .btn--goCheckOut {
+      background-color: $blue;
+      width: 250px;
+      height: 37px;
+      border-radius: 50px;
+      margin: 15px 0 20px 0;
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: white;
       }
     }
   }
