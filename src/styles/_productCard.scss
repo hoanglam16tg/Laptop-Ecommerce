@@ -1,0 +1,16 @@
+.productCard {
+  border: 1px solid black;
+  width: 230px;
+  height: fit-content;
+  display: inline-block;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 40px ;
+  margin-left: 45px;
+  img{
+    transition: transform 0.5s ease 0s;
+  }
+  img:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+  }
+}
