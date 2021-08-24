@@ -4,8 +4,8 @@ import {dataLaptop,dataCPU,dataScreen} from "./DataCard"
 
 const ListCard = () => {
   const [listCard, SetListCard] = React.useState(dataLaptop);
-  const [listCardCPU, SetListCard2CPU] =React.useState(dataCPU);
-  // const [listCardScreen, SetListCard2CPU] =React.useState(dataCPU);
+  const [listCardCPU, SetListCardCPU] =React.useState(dataCPU);
+  // const [listCardScreen, SetListCardScreen] =React.useState(dataScreen);
 
   const renderCard = () =>{
     const list = listCard.map((item, index) => {
