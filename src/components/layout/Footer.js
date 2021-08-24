@@ -109,6 +109,14 @@ const Footer = () => {
             <Link>
               <img src={discoverImage} alt="" />
             </Link>
+            <InstagramOutlined />
+          </div>
+          <div className="Footer__social--pay">
+            <img src={paypalImage} alt="" />
+            <img src={visaImage} alt="" />
+            <img src={americanExpressrImage} alt="" />
+            <img src={maestroImage} alt="" />
+            <img src={discoverImage} alt="" />
           </div>
           <div className="Footer__social--copyright">
             <span>Copyright © 2020 Shop Pty. Ltd.</span>
