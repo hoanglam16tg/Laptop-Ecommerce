@@ -23,7 +23,7 @@ const Header = () => {
     <div className="header">
       <div className="container wrap--heading">
         <div className="header__logo">
-          <Link>
+          <Link to="/">
             <img src={LogoImage} alt="" />
           </Link>
         </div>
@@ -38,11 +38,13 @@ const Header = () => {
               onClick={handleShowFormSearch}
             />
           )}
+          <Link to="/cart">
           <Dropdown overlay={DropdownMiniCard} placement="bottomCenter" arrow>
             <Badge count={2}>
               <ShoppingCartOutlined />
             </Badge>
           </Dropdown>
+          </Link>
           <Dropdown overlay={DropdownAccount} placement="bottomRight" arrow>
             <Avatar size={36} icon={<UserOutlined />} />
           </Dropdown>

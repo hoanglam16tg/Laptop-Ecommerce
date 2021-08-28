@@ -12,10 +12,10 @@ export const DropdownAccount = (
       <Link>My Wish List</Link>
     </Menu.Item>
     <Menu.Item>
-      <Link>Create an Account</Link>
+      <Link >Create an Account</Link>
     </Menu.Item>
     <Menu.Item>
-      <Link>Sign In</Link>
+      <Link to="/login">Sign In</Link>
     </Menu.Item>
   </Menu>
 );

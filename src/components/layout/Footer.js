@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Input, Button } from "antd";
-
 import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
 import paypalImage from "../../assets/images/paypal.png";
 import discoverImage from "../../assets/images/discover.png";
@@ -109,6 +108,14 @@ const Footer = () => {
             <Link>
               <img src={discoverImage} alt="" />
             </Link>
+            <InstagramOutlined />
+          </div>
+          <div className="Footer__social--pay">
+            <img src={paypalImage} alt="" />
+            <img src={visaImage} alt="" />
+            <img src={americanExpressrImage} alt="" />
+            <img src={maestroImage} alt="" />
+            <img src={discoverImage} alt="" />
           </div>
           <div className="Footer__social--copyright">
             <span>Copyright © 2020 Shop Pty. Ltd.</span>

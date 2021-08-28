@@ -17,7 +17,7 @@ const contentStyle = {
 const carousel = () => {
   return (
     <>
-      <Carousel className="container carousel--banner" autoplay>
+      <Carousel autoplay className="Carousel--banner">
         <div>
           <img src={Banner1} alt="" style={contentStyle} />
         </div>
