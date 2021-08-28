@@ -9,6 +9,7 @@ const Home = () => {
       <Header />
       {/* <Body /> */}
       <ProductDetails />
+      <Body />
       <Footer />
     </>
   );

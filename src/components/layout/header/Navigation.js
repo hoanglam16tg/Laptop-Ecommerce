@@ -6,6 +6,9 @@ const Navigation = () => {
     <div className="header__navigation">
       <ul className="header__navigation--WrapItem">
         <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
           <Link>Laptops</Link>
         </li>
         <li>
