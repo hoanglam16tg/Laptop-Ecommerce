@@ -3,12 +3,14 @@ import ProductCard from "./ProductCard";
 import {dataLaptop,dataCPU,dataScreen} from "./DataCard"
 
 const ListCard = () => {
-  const [listCard, SetListCard] = React.useState(dataLaptop);
-  const [listCardCPU, SetListCardCPU] =React.useState(dataCPU);
-  // const [listCardScreen, SetListCardScreen] =React.useState(dataScreen);
+  const [listCard, setListCard] = React.useState({
+    Laptop: dataLaptop,
+    CPU: dataCPU,
+    Screen: dataScreen,
+  });
 
-  const renderCard = () =>{
-    const list = listCard.map((item, index) => {
+  const listCardLaptop = () => {
+    const listLapTop = listCard.Laptop.map((item, index) => {
       return (
         <ProductCard
          status={item.status}
@@ -19,10 +21,10 @@ const ListCard = () => {
         />
       );
     });
-    return list;
+    return listLapTop;
   }
-  const renderCardCPU = () =>{
-    const listCPU = listCardCPU.map((item, index) => {
+  const listCardCPU = () => {
+    const listCPU = listCard.CPU.map((item, index) => {
       return (
         <ProductCard
          status={item.status}
@@ -35,12 +37,29 @@ const ListCard = () => {
     });
     return listCPU;
   }
+  const listCardScreen = () => {
+    const listScreen = listCard.Screen.map((item, index) => {
+      return (
+        <ProductCard
+         status={item.status}
+         src={item.src}
+         title={item.title}
+         content={item.content}
+         price={item.price}
+        />
+      );
+    });
+    return listScreen;
+  }
   return (
     <>
-    {renderCard()}
+    {listCardLaptop()}
     <br/>
-    {renderCardCPU()}
+    {listCardCPU()}
+    <br/>
+    {listCardScreen()}
     </>
   )
 }
+
 export default ListCard;

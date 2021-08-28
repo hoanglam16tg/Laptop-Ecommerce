@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Input, Button } from "antd";
-
 import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
 import paypalImage from "../../assets/images/paypal.png";
 import discoverImage from "../../assets/images/discover.png";

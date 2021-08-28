@@ -1,12 +1,12 @@
-@import '~antd/dist/antd.css';
-@import 'variables';
 
-img {
-  width: 100%;
-}
-
-li {
-  box-sizing: border-box;
-  background-color: $gray-dark;
-  width: 15px;
+.Carousel--banner{
+  img {
+    width: 100%;
+  }
+  
+  li {
+    box-sizing: border-box;
+    background-color: $gray-dark;
+    width: 15px;
+  }
 }

@@ -1,5 +1,4 @@
 import { Carousel } from 'antd';
-import '../../../styles/_carousel.scss';
 import Banner1 from '../../../assets/images/Body/banner_1.webp';
 import Banner3 from '../../../assets/images/Body/banner_3.webp';
 import Banner2 from '../../../assets/images/Body/banner_2.webp';
@@ -18,7 +17,7 @@ const contentStyle = {
 const carousel = () => {
   return (
     <>
-      <Carousel autoplay>
+      <Carousel autoplay className="Carousel--banner">
         <div>
           <img src={Banner1} alt="" style={contentStyle} />
         </div>
