@@ -1,18 +1,18 @@
-import { Carousel } from 'antd';
-import Banner1 from '../../../assets/images/Body/banner_1.webp';
-import Banner3 from '../../../assets/images/Body/banner_3.webp';
-import Banner2 from '../../../assets/images/Body/banner_2.webp';
-import Banner4 from '../../../assets/images/Body/banner_4.jpg';
-import Banner5 from '../../../assets/images/Body/banner_5.webp';
-import Banner6 from '../../../assets/images/Body/banner_6.webp';
-import Banner7 from '../../../assets/images/Body/banner_7.webp';
+import { Carousel } from "antd";
+import Banner1 from "../../../assets/images/Body/banner_1.webp";
+import Banner3 from "../../../assets/images/Body/banner_3.webp";
+import Banner2 from "../../../assets/images/Body/banner_2.webp";
+import Banner4 from "../../../assets/images/Body/banner_4.jpg";
+import Banner5 from "../../../assets/images/Body/banner_5.webp";
+import Banner6 from "../../../assets/images/Body/banner_6.webp";
+import Banner7 from "../../../assets/images/Body/banner_7.webp";
 
 const contentStyle = {
-  height: '390px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
+  height: "390px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
 };
 const carousel = () => {
   return (

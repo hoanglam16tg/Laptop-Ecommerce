@@ -9,8 +9,10 @@ const ProductCard = (props) => {
       <p>{props.content}...</p>
       <h2>${props.price}.00</h2>
       <div>
-        <Button type='primary'>Buy</Button>
-        <Button type='primary' danger>Add To Cart</Button>
+        <Button type="primary">Buy</Button>
+        <Button type="primary" danger>
+          Add To Cart
+        </Button>
       </div>
     </div>
   );

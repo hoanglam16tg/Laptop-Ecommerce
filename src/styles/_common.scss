@@ -1,0 +1,16 @@
+.sub__navigation {
+  width: 60%;
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray;
+    margin-right: 30px;
+    transition: all 0.3s ease-in;
+    &:focus,
+    &:hover {
+      color: black;
+      border-bottom: 1px solid $blue;
+    }
+  }
+}
