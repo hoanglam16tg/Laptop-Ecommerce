@@ -1,0 +1,11 @@
+.lazyLoad-wrapper {
+  margin-top: 14px;
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #f5f7ff;
+    margin: 20px 0 30px 0;
+    gap: 20px 3px;
+  }
+}

@@ -1,10 +1,16 @@
 .header {
   width: 100%;
   border-bottom: 1px solid $gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: white;
   .wrap--heading {
     height: 90px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0 30px;
   }
   &__logo {
@@ -17,7 +23,6 @@
       gap: 0 25px;
       font-weight: 600;
       color: $black;
-      margin-right: 180px;
       li:first-child a,
       li:hover > a {
         color: $blue;
@@ -52,10 +57,9 @@
     .btn--cancelFormSearch {
       font-size: 25px;
       color: $blue;
-      font-size: 40px;
+      font-size: 25px;
       font-weight: 400;
       color: $blue;
-      margin-bottom: 5px;
       transition: all 0.3s;
       &:hover {
         cursor: pointer;

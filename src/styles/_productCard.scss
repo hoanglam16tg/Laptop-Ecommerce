@@ -1,17 +1,66 @@
 .productCard {
-  border: 1px solid black;
+  border: 1px solid $gray;
   width: 230px;
-  height: fit-content;
-  display: inline-block;
-  box-shadow: 5px 10px 18px #888888;
-  margin: 40px;
-  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: white;
+  &__status {
+    &--inStock {
+      font-size: 10px;
+      line-height: 210%;
+      color: #78a962;
+    }
+    &--availability {
+      font-size: 10px;
+      line-height: 210%;
+      margin: 7px 0;
+      color: #c94d3f;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  &__price {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 400;
+  }
   img {
     width: 100%;
-    transition: transform 0.5s ease 0s;
+    transition: transform 0.3s ease 0s;
   }
   img:hover {
     cursor: pointer;
     transform: scale(0.95);
+  }
+  .btn--add {
+    align-items: center;
+    padding: 8px 20px;
+    width: 160px;
+    height: 37px;
+    border: 2px solid #0156ff;
+    border-radius: 50px;
+    span {
+      color: $blue;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &:hover {
+      background-color: #0156ff;
+      span {
+        color: white;
+      }
+    }
   }
 }

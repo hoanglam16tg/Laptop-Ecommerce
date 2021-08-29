@@ -3,6 +3,7 @@ import ListCard from "../common/BodyDetails/ListCard";
 import { Link, Route, Switch } from "react-router-dom";
 import Login from "../../screens/Login";
 import CartPage from "../../screens/CartPage";
+import BodyDetails from "../common/BodyDetails";
 const Body = () => {
   return (
     <>
@@ -12,8 +13,7 @@ const Body = () => {
         </Route>
         <Route exact path="/">
           {" "}
-          <Slide />
-          <ListCard />
+          <BodyDetails />
         </Route>
         <Route path="/cart">
           <CartPage />
