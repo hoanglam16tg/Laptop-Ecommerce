@@ -8,7 +8,8 @@
     margin-right: 30px;
     transition: all 0.3s ease-in;
     &:focus,
-    &:hover {
+    &:hover,
+    &:first-child {
       color: black;
       border-bottom: 1px solid $blue;
     }
