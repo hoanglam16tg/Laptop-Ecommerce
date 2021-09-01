@@ -11,6 +11,7 @@ import Support from "../../common/Support/index";
 import Image13 from "../../../assets/images/Group13.png";
 import banner from "../../../assets/images/DetailProduct/bannerDetail.png";
 import banner2 from "../../../assets/images/DetailProduct/bannerDetail2.png";
+import banner3 from "../../../assets/images/DetailProduct/bannerDetail3.png";
 const ProductDetails = () => {
   return (
     <>
@@ -29,22 +30,25 @@ const ProductDetails = () => {
           </div>
           <div className="ProductDetails__imageProduct">
             <ShowImage />
-            <div style={{ marginLeft: "125px" }}>
+            <div style={{ margin: "0 0 60px 125px" }}>
               <img src={Image13} alt="" />
             </div>
           </div>
         </div>
       </div>
       <Carousel autoplay>
-        <div style={{ width: "100%" }}>
-          <img src={banner} alt="" />
+        <div>
+          <img src={banner} alt="" style={{ width: "100%" }} />
         </div>
-        <div style={{ width: "100%" }}>
-          <img src={banner} alt="" />
+        <div>
+          <img src={banner} alt="" style={{ width: "100%" }} />
         </div>
       </Carousel>
-      <div style={{ width: "100%" }}>
-        <img src={banner2} alt="" />
+      <div>
+        <img src={banner3} alt="" style={{ width: "100%" }} />
+      </div>
+      <div>
+        <img src={banner2} alt="" style={{ width: "100%" }} />
       </div>
       <Support />
     </>

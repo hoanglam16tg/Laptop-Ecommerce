@@ -1,9 +1,8 @@
 .header {
   width: 100%;
   border-bottom: 1px solid $gray;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 99;
   background-color: white;
   .wrap--heading {

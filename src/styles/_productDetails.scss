@@ -1,6 +1,5 @@
 .ProductDetails {
   width: 100%;
-  margin-top: 91px;
   .container {
     width: 100%;
     height: 100%;
@@ -30,8 +29,7 @@
     flex: 1;
     justify-content: flex-end;
     align-items: center;
-    &--btn,
-    &--btn:hover {
+    &--btn {
       background-color: $blue;
       width: 150px;
       height: 50px;
@@ -53,7 +51,6 @@
 
   .container__info {
     width: 100%;
-    height: 675px;
     display: flex;
     border-top: 1px solid $gray;
   }
@@ -61,8 +58,7 @@
     width: 60%;
     background-color: #f5f7ff;
     .wrapper__content {
-      width: 570px;
-      margin: 110px 0 0 370px;
+      padding: 110px 120px 60px 370px;
       h1 {
         font-weight: 500;
         font-size: 32px;

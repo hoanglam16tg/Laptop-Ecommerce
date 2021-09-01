@@ -17,7 +17,7 @@ import IntroduceImage3 from "../../../assets/images/Body/GamingMonitors.png";
 
 const BodyDetails = () => {
   return (
-    <div className="container" style={{ marginTop: "91px" }}>
+    <div className="container">
       <Slide />
       <ZipPay />
       <div className="lazyLoad-wrapper">
