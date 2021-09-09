@@ -23,7 +23,9 @@ const Heading = () => {
             defaultValue={1}
           />
         </div>
-        <Button className="ProductDetails__addProduct--btn">Add to Card</Button>
+        <Button type="primary" className="ProductDetails__addProduct--btn">
+          Add to Card
+        </Button>
       </div>
     </div>
   );
