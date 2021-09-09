@@ -1,5 +1,6 @@
 .productCard {
   border: 1px solid $gray;
+  border-radius: 2px;
   width: 230px;
   display: flex;
   flex-direction: column;
@@ -45,6 +46,6 @@
   }
   img:hover {
     cursor: pointer;
-    transform: scale(0.95);
+    transform: scale(1.075);
   }
 }

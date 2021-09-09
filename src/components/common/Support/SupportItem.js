@@ -11,7 +11,7 @@ const SupportItem = (props) => {
         <div className="Support__content--title">
           <h3>{title}</h3>
         </div>
-        <div className="Support__content--subTitle">
+        <div className="Support__content--c">
           <span>{subtitle}</span>
         </div>
       </div>

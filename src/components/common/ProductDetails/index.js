@@ -20,10 +20,10 @@ const ProductDetails = () => {
         <div className="container__info">
           <div className="ProductDetails__aboutProduct">
             <Switch>
-              <Route path="/AboutProduct">
+              <Route exact path="/product-details/AboutProduct">
                 <AboutProductContent />
               </Route>
-              <Route path="/ProductDetail">
+              <Route exact path="/product-details/ProductDetail">
                 <DetailProductContent />
               </Route>
             </Switch>

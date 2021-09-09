@@ -1,6 +1,7 @@
-import * as React from "react";
-import ProductCard from "./ProductCard";
-import { dataLaptop, dataCPU, dataScreen } from "./DataCard";
+import * as React from 'react';
+import ProductCard from './ProductCard';
+import { Link } from 'react-router-dom';
+import { dataLaptop, dataCPU, dataScreen } from './DataCard';
 
 const ListCard = () => {
   const [listCard, setListCard] = React.useState({
@@ -12,13 +13,15 @@ const ListCard = () => {
   const listCardLaptop = () => {
     const listLapTop = listCard.Laptop.map((item, index) => {
       return (
-        <ProductCard
-          status={item.status}
-          src={item.src}
-          title={item.title}
-          content={item.content}
-          price={item.price}
-        />
+        <Link to="/product-details">
+          <ProductCard
+            status={item.status}
+            src={item.src}
+            title={item.title}
+            content={item.content}
+            price={item.price}
+          />
+        </Link>
       );
     });
     return listLapTop;
@@ -26,13 +29,15 @@ const ListCard = () => {
   const listCardCPU = () => {
     const listCPU = listCard.CPU.map((item, index) => {
       return (
-        <ProductCard
-          status={item.status}
-          src={item.src}
-          title={item.title}
-          content={item.content}
-          price={item.price}
-        />
+        <Link to="/product-details">
+          <ProductCard
+            status={item.status}
+            src={item.src}
+            title={item.title}
+            content={item.content}
+            price={item.price}
+          />
+        </Link>
       );
     });
     return listCPU;
@@ -40,13 +45,15 @@ const ListCard = () => {
   const listCardScreen = () => {
     const listScreen = listCard.Screen.map((item, index) => {
       return (
-        <ProductCard
-          status={item.status}
-          src={item.src}
-          title={item.title}
-          content={item.content}
-          price={item.price}
-        />
+        <Link to="/product-details">
+          <ProductCard
+            status={item.status}
+            src={item.src}
+            title={item.title}
+            content={item.content}
+            price={item.price}
+          />
+        </Link>
       );
     });
     return listScreen;

@@ -1,9 +1,11 @@
-import Slide from "../common/BodyDetails/Carousel";
-import ListCard from "../common/BodyDetails/ListCard";
-import { Link, Route, Switch } from "react-router-dom";
-import Login from "../../screens/Login";
-import CartPage from "../../screens/CartPage";
-import BodyDetails from "../common/BodyDetails";
+import { Route, Switch } from 'react-router-dom';
+import Login from './Auth/Login';
+import CartPage from './CartPage';
+import BodyDetails from '../common/BodyDetails/index';
+import ProductDetails from '../common/ProductDetails/index';
+import Contact from './Contact';
+import AboutUs from './AboutUs';
+
 const Body = () => {
   return (
     <>
@@ -11,12 +13,20 @@ const Body = () => {
         <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/">
-          {" "}
-          <BodyDetails />
-        </Route>
         <Route path="/cart">
           <CartPage />
+        </Route>
+        <Route path="/product-details">
+          <ProductDetails />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/aboutUs">
+          <AboutUs />
+        </Route>
+        <Route exact path="/">
+          <BodyDetails />
         </Route>
       </Switch>
     </>

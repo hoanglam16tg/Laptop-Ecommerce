@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {dataLaptop} from "../components/common/BodyDetails/DataCard"
-import ProductCard from "../components/common/BodyDetails/ProductCard";
+import {dataLaptop} from "../common/BodyDetails/DataCard"
+import ProductCard from "../common/BodyDetails/ProductCard";
 
 const CartPage = () => {
   const [listCard, setListCard] = React.useState({

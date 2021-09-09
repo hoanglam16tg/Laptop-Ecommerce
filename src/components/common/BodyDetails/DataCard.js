@@ -109,10 +109,10 @@ export const dataScreen = [
     price: "350",
   },
   {
-    status: "Check availability",
-    src: "https://lh3.googleusercontent.com/nmxUcOhEU29rmO3xMbmTgVNm2jQPlTAKl9G3d9Hs461jk8_j6pE06QBOs_eTTdXLn1ZvGdvDCVpRQA-eSZuvWftUywqdDA5T=rw-w300",
+    status: "In Stock",
+    src: "https://lh3.googleusercontent.com/m2BRFggSZAa0aF1X3E6q_FeY7w2cwBZEV2cyOBFV6AMskJDK9oh7A51N46dT1SJE8bMzIcMZglDoyCNXuNM=rw-w300",
     content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
-    title: 'Screen SAMSUNG 21.5"',
-    price: "120",
+    title: 'Screen LCD LG 27"',
+    price: "350",
   },
 ];

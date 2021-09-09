@@ -6,8 +6,8 @@ const Heading = () => {
   return (
     <div className="container">
       <div className="ProductDetails__navigation">
-        <Link to="/AboutProduct">About Product</Link>
-        <Link to="/ProductDetail">Details</Link>
+        <Link to="/product-details/AboutProduct">About Product</Link>
+        <Link to="/product-details/ProductDetail">Details</Link>
       </div>
 
       <div className="ProductDetails__addProduct">
