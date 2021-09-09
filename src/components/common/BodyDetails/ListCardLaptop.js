@@ -6,12 +6,12 @@ const ListCardLaptop = () => {
   const [listCard, setListCard] = React.useState({
     Laptop: dataLaptop,
   });
-
   return (
     <>
       {listCard.Laptop.map((item, index) => {
         return (
           <ProductCard
+            key={index}
             status={item.status}
             src={item.src}
             title={item.title}

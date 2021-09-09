@@ -39,11 +39,11 @@ const Header = () => {
             />
           )}
           <Link to="/cart">
-          <Dropdown overlay={DropdownMiniCard} placement="bottomCenter" arrow>
-            <Badge count={2}>
-              <ShoppingCartOutlined />
-            </Badge>
-          </Dropdown>
+            <Dropdown overlay={DropdownMiniCard} placement="bottomCenter" arrow>
+              <Badge count={2}>
+                <ShoppingCartOutlined />
+              </Badge>
+            </Dropdown>
           </Link>
           <Dropdown overlay={DropdownAccount} placement="bottomRight" arrow>
             <Avatar size={36} icon={<UserOutlined />} />
