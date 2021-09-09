@@ -101,4 +101,11 @@ export const dataScreen = [
     title: 'Screen LCD LG 27"',
     price: "350",
   },
+  {
+    status: "In Stock",
+    src: "https://lh3.googleusercontent.com/m2BRFggSZAa0aF1X3E6q_FeY7w2cwBZEV2cyOBFV6AMskJDK9oh7A51N46dT1SJE8bMzIcMZglDoyCNXuNM=rw-w300",
+    content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    title: 'Screen LCD LG 27"',
+    price: "350",
+  },
 ];

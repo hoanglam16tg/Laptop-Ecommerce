@@ -4,7 +4,7 @@ import { SearchOutlined } from "@ant-design/icons";
 
 const SearchBar = () => {
   return (
-    <div className="container__search">
+    <div className="container__search ">
       <Input
         className="container__search--input"
         placeholder="Search entiere store here..."
