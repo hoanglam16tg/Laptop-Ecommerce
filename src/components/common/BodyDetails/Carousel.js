@@ -8,7 +8,6 @@ import Banner6 from "../../../assets/images/Body/banner_6.webp";
 import Banner7 from "../../../assets/images/Body/banner_7.webp";
 
 const contentStyle = {
-  height: "390px",
   color: "#fff",
   lineHeight: "160px",
   textAlign: "center",

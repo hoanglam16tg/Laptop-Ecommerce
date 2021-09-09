@@ -6,6 +6,11 @@
   justify-content: space-between;
   padding: 15px 25px;
   background-color: white;
+  transition: 0.2s ease-in;
+  &:hover {
+    border: 1px solid $blue;
+    background-color: $blue-light;
+  }
   &__status {
     &--inStock {
       font-size: 10px;
@@ -15,7 +20,6 @@
     &--availability {
       font-size: 10px;
       line-height: 210%;
-      margin: 7px 0;
       color: #c94d3f;
     }
   }
@@ -42,25 +46,5 @@
   img:hover {
     cursor: pointer;
     transform: scale(0.95);
-  }
-  .btn--add {
-    align-items: center;
-    padding: 8px 20px;
-    width: 160px;
-    height: 37px;
-    border: 2px solid #0156ff;
-    border-radius: 50px;
-    span {
-      color: $blue;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 21px;
-    }
-    &:hover {
-      background-color: #0156ff;
-      span {
-        color: white;
-      }
-    }
   }
 }

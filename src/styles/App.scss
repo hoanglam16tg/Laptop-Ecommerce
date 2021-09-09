@@ -1,10 +1,12 @@
 @import "variables";
 @import "reset";
 @import "base";
+@import "responsive";
 @import "mixin";
 @import "common";
 @import "header";
 @import "carousel";
+@import "zipPay";
 @import "productCard";
 @import "productDetails";
 @import "introduceCard";
@@ -15,3 +17,8 @@
 @import "bodyDetail";
 @import "branch";
 @import "newsOffer";
+@import "carouselNewProduct";
+@import "responsiveHome";
+@import "catalogColumLeft";
+@import "catalog";
+@import "productCardRow";

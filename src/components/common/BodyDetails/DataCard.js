@@ -34,6 +34,13 @@ export const dataLaptop = [
     title: "ASUS",
     price: 601,
   },
+  {
+    status: "In Stock",
+    src: "https://lh3.googleusercontent.com/MaNYTTv-4gkgptnl12eLDeA-Q6GvFaQLwqwGrhRCk2atMwD1blGaBNITqaEE8EuYlrU_2k4f6jxY4f2tOZSy7JRzRgXgJ5U=rw-w300",
+    content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    title: "Laptop Dell",
+    price: 700,
+  },
 ];
 export const dataCPU = [
   {
@@ -100,5 +107,12 @@ export const dataScreen = [
     content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
     title: 'Screen LCD LG 27"',
     price: "350",
+  },
+  {
+    status: "Check availability",
+    src: "https://lh3.googleusercontent.com/nmxUcOhEU29rmO3xMbmTgVNm2jQPlTAKl9G3d9Hs461jk8_j6pE06QBOs_eTTdXLn1ZvGdvDCVpRQA-eSZuvWftUywqdDA5T=rw-w300",
+    content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    title: 'Screen SAMSUNG 21.5"',
+    price: "120",
   },
 ];
