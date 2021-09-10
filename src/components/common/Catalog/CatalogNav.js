@@ -21,7 +21,7 @@ const CatalogNav = () => {
     <>
       <div className="catalogProduct__navBar">
         <div className="catalogProduct__navBar--left">
-          {" "}
+          
           <CaretLeftOutlined />
           Back
         </div>
@@ -32,8 +32,8 @@ const CatalogNav = () => {
           <div className="dropdown">
             <Dropdown overlay={menu} placement="bottomCenter">
               <Button>
-                Sort By:{" "}
-                <b style={{ color: "black", marginLeft: "3px" }}> Position</b>{" "}
+                Sort By:
+                <b style={{ color: "black", marginLeft: "3px" }}> Position</b>
                 <DownOutlined />
               </Button>
             </Dropdown>
@@ -41,20 +41,20 @@ const CatalogNav = () => {
           <div className="dropdown">
             <Dropdown overlay={menu} placement="bottomCenter">
               <Button>
-                Show:{" "}
+                Show:
                 <b style={{ color: "black", marginLeft: "3px" }}>
-                  {" "}
+                  
                   35 per page
-                </b>{" "}
+                </b>
                 <DownOutlined />
               </Button>
             </Dropdown>
           </div>
           <div className="icon">
-            <Link to="/all/list-grid">
+            <Link to="/catalog">
               <AppstoreOutlined className="icon--gridDisplay" />
             </Link>
-            <Link to="/all/list-row">
+            <Link to="/catalog/list-row">
               <AlignLeftOutlined className="icon--rowDisplay" />
             </Link>
           </div>

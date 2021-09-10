@@ -11,7 +11,7 @@ const AboutUs = () => {
     <>
       <div className="about">
         <div className="container">
-          <h1>About Us</h1>
+          <h1>ABOUT US</h1>
           <div className="about__one">
               <div className="about__one--content">
                 <h1>A Family That Keeps On Growing</h1>
