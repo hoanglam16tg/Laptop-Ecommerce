@@ -1,7 +1,7 @@
-import { Button, Drawer } from 'antd';
-import {UnorderedListOutlined} from '@ant-design/icons';
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Button, Drawer } from "antd";
+import { UnorderedListOutlined } from "@ant-design/icons";
+import * as React from "react";
+import { Link } from "react-router-dom";
 const Navigation = () => {
   const [visible, setVisible] = React.useState(false);
 
@@ -46,8 +46,16 @@ const Navigation = () => {
         </ul>
       </div>
       <div className="tableVisible">
-          <UnorderedListOutlined style={{ fontSize: '30px', color: '#fff'}} onClick={showDrawer}/>
-        <Drawer title="Menu" placement="left" onClose={onClose} visible={visible}>
+        <UnorderedListOutlined
+          style={{ fontSize: "30px", color: "#fff" }}
+          onClick={showDrawer}
+        />
+        <Drawer
+          title="Menu"
+          placement="left"
+          onClose={onClose}
+          visible={visible}
+        >
           <li>
             <Link to="/">Home</Link>
           </li>

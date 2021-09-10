@@ -16,7 +16,7 @@ const CatalogColumLeft = () => {
         title={"My Wish List"}
         subtitle={"You have no items in your wish list."}
       />
-      <div>
+      <div className="bannerAdvertisement">
         <img src={bannerAdvertisement} alt="" />
       </div>
     </div>
