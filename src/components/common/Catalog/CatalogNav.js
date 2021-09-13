@@ -69,10 +69,10 @@ const CatalogNav = () => {
             </Dropdown>
           </div>
           <div className="icon">
-            <Link to="/all/list-grid">
+            <Link to="/catalog">
               <AppstoreOutlined className="icon--gridDisplay" />
             </Link>
-            <Link to="/all/list-row">
+            <Link to="/catalog/list-row">
               <AlignLeftOutlined className="icon--rowDisplay" />
             </Link>
           </div>

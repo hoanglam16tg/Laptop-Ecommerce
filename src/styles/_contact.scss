@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 500px;
   display: inline-block;
-  margin-top: 91px;
+  margin-top: 51px;
 
   &__Form {
     width: 70%;
@@ -50,5 +50,12 @@
     a {
       margin: 0 21px;
     }
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: 121px;
+
+  }
+  @media only screen and (max-width: 450px) {
+    margin-top: 91px;
   }
 }
