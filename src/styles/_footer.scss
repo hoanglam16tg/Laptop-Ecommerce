@@ -43,16 +43,18 @@
     gap: 0 78px;
     justify-content: space-between;
     border-bottom: 1px solid $gray;
+    .wrap__title {
+      margin-bottom: 60px;
+    }
     h2 {
       color: $gray;
       font-weight: 700;
-      margin-bottom: 60px;
     }
-    p {
+    li {
       margin-bottom: 2em;
       transition: all 0.2s ease-in;
     }
-    p:hover {
+    li:hover {
       cursor: pointer;
       color: $gray;
     }

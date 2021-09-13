@@ -5,6 +5,7 @@ import BodyDetails from '../common/BodyDetails/index';
 import ProductDetails from '../common/ProductDetails/index';
 import Contact from './Contact';
 import AboutUs from './AboutUs';
+import Catalog from "../common/Catalog/index"
 
 const Body = () => {
   return (
@@ -24,6 +25,9 @@ const Body = () => {
         </Route>
         <Route path="/aboutUs">
           <AboutUs />
+        </Route>
+        <Route path="/catalog">
+          <Catalog />
         </Route>
         <Route exact path="/">
           <BodyDetails />

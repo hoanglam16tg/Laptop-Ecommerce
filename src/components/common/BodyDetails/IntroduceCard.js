@@ -9,7 +9,7 @@ const IntroduceCard = (props) => {
   return (
     <div className="introduceCard" style={backgroundCard}>
       <h2 className="introduceCard__content">{title}</h2>
-      <Link className="introduceCard__link" to={linkTo}>
+      <Link className="introduceCard__link" to="/catalog">
         See All Products
       </Link>
     </div>

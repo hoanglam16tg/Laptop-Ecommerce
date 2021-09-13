@@ -1,0 +1,271 @@
+//tablet ipad
+
+@include Responsive(MD) {
+  .hide-md {
+    display: none;
+  }
+  .show-md {
+    display: block;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .ant-carousel .slick-slider {
+    padding: 0;
+    margin-top: 91px;
+  }
+  .header .container__search {
+    display: block;
+  }
+  .wrapper__carouselNewProduct .react-multiple-carousel__arrow--right {
+    right: 12px;
+  }
+
+  .branch {
+    flex-wrap: wrap;
+    gap: 5px 23px;
+    justify-content: flex-start;
+  }
+  .lazyLoad-wrapper {
+    grid-template-areas:
+      "navSub navSub navSub"
+      "banner productCart productCart";
+    .sub__navigation {
+      width: 70%;
+      padding-bottom: 1px;
+    }
+    .introduceCard {
+      padding: 15px 50px;
+      margin-right: 18px;
+    }
+    .productCard {
+      padding: 15px 36px;
+    }
+    .react-multiple-carousel__arrow--right {
+      right: 10px;
+    }
+  }
+  .newsOffer {
+    gap: 20px 6px;
+  }
+  .Support {
+    background-color: white;
+    gap: 11px;
+    &__content {
+      width: auto;
+    }
+  }
+
+  .Footer {
+    .container {
+      padding: 0 60px;
+    }
+    &__SignUpNews {
+      &--title {
+        h2 {
+          font-size: 18px;
+          line-height: 132.5%;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      &--form {
+        width: 186px;
+      }
+    }
+    &__information {
+      flex-direction: column;
+      margin: 0 20px;
+      border: none;
+      padding: 29px 0 15px 0;
+      .wrap__title {
+        margin-bottom: 20px;
+        border-bottom: 1px solid white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s ease-in;
+        .transformArrowUp-md {
+          transform: rotate(180deg);
+          transition: 0.5s ease-in;
+        }
+        .transformArrowDown-md {
+          transition: 0.5s ease-in;
+        }
+      }
+      h2 {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+      li {
+        font-size: 12px;
+      }
+      ul {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+//mobile
+
+@include Responsive(XS) {
+  .container {
+    padding: 0 15px;
+  }
+  .wrapper__carouselNewProduct--title {
+    margin-bottom: 7px;
+    h2 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    a {
+      font-size: 10px;
+      line-height: 115%;
+      text-decoration-line: underline;
+    }
+  }
+  .wrapper__carouselNewProduct {
+    .productCard {
+      max-width: 170px;
+      .btn--add {
+        width: 125px;
+        padding: 6px 5px;
+        height: 40px;
+      }
+    }
+  }
+  .wrapper__carouselNewProduct {
+    .react-multiple-carousel__arrow--right {
+      right: 4px;
+    }
+  }
+  .ZipPay {
+    height: 120px;
+    flex-direction: column;
+    img + span {
+      display: none;
+    }
+    &__content {
+      font-weight: 400;
+      margin-top: 18px;
+      text-align: center;
+      line-height: initial;
+    }
+  }
+  .lazyLoad-wrapper {
+    grid-template-areas:
+      "banner"
+      "navSub"
+      "productCart";
+    .react-multiple-carousel__arrow--right,
+    .react-multiple-carousel__arrow--left {
+      display: none;
+    }
+    .sub__navigation {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 5px 0;
+      a {
+        margin-right: 15px;
+      }
+    }
+    .productCard {
+      padding: 15px 25px;
+      margin-left: 54px;
+    }
+    .introduceCard {
+      width: 100%;
+      margin: 0 0 16px 0;
+      padding: 0;
+      background-size: 100% 100%;
+      &__content {
+        width: auto;
+        margin: 25px 0 15px 0;
+      }
+      &__link {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .branch {
+    height: auto;
+    padding: 0;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+    img {
+      width: 127px;
+    }
+  }
+  .container--newsOffer {
+    display: none;
+  }
+  .Support {
+    flex-direction: column;
+    padding: 25px 45px;
+    height: auto;
+    gap: 20px 0;
+    &__content {
+      height: auto;
+      &--icon {
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      &--title {
+        h3 {
+          font-size: 14px;
+        }
+      }
+      &--subtitle {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .Footer {
+    .container {
+      padding: 0 23px;
+    }
+    &__SignUpNews {
+      flex-direction: column;
+      padding-top: 35px;
+      &--form {
+        width: 329px;
+        height: 40px;
+        .input--email {
+          padding: 7px;
+        }
+        .btn--subscribe {
+          margin-left: 13px;
+          height: 40px;
+        }
+      }
+    }
+    &__information {
+      margin: 0;
+      padding: 15px 0 15px 0;
+      h2 {
+        font-size: 12px;
+      }
+    }
+    &__social {
+      padding: 0 0 18px 0;
+      flex-wrap: wrap;
+      gap: 25px;
+      &--pay {
+        order: 3;
+        gap: 0 10px;
+        margin: 0 54px;
+      }
+      &--copyright {
+        font-size: 10px;
+      }
+    }
+  }
+}

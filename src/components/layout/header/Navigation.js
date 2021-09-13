@@ -1,5 +1,5 @@
 import { Button, Drawer } from 'antd';
-import {UnorderedListOutlined} from '@ant-design/icons';
+import { UnorderedListOutlined } from '@ant-design/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 const Navigation = () => {
@@ -46,7 +46,10 @@ const Navigation = () => {
         </ul>
       </div>
       <div className="tableVisible">
-          <UnorderedListOutlined style={{ fontSize: '30px', color: '#fff'}} onClick={showDrawer}/>
+        <UnorderedListOutlined
+          style={{ fontSize: '30px', color: '#fff' }}
+          onClick={showDrawer}
+        />
         <Drawer title="Menu" placement="left" onClose={onClose} visible={visible}>
           <li>
             <Link to="/">Home</Link>
@@ -70,10 +73,10 @@ const Navigation = () => {
             <Link>All Other Products</Link>
           </li>
           <li>
-            <Link>Repairs</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
-            <Link>Our Deals</Link>
+            <Link to="/aboutUs">Our Deals</Link>
           </li>
           <li>
             <Link to="/login">Sign in</Link>

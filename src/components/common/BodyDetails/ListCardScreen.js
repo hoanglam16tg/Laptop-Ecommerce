@@ -11,6 +11,7 @@ const ListCardScreen = () => {
       {listCard.Screen.map((item, index) => {
         return (
           <ProductCard
+            key={index}
             status={item.status}
             src={item.src}
             title={item.title}

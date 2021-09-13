@@ -23,7 +23,7 @@ const Contact = () => {
                 remember: true,
               }}
             >
-              <h1>Contact Us</h1>
+              <h1>CONTACT US</h1>
               <p>
                 We love hearing from you, our Shop customers.
                 <br />
