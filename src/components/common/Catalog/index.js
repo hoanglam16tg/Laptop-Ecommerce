@@ -54,7 +54,7 @@ const Catalog = () => {
                 margin: "15px 0 60px 0",
               }}
             >
-              <Pagination defaultCurrent={1} total={15} />
+              <Pagination defaultCurrent={1} total={15} pageSize={10} />
             </Row>
             <Row>
               <MoreInfo />
