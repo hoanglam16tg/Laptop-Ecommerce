@@ -44,29 +44,30 @@
       .header__iconShortCut {
         display: float;
         float: left;
-        padding-left: 50px;
+        padding-left: 42px;
       }
     }
 
     // ----------------Responsive Mobile--------------------
     @media only screen and (max-width: 450px) {
       width: 375px;
-      height: 70px;
-
+      padding: 0 9px;
       .container__search {
         input {
           height: 30px;
           width: 227px;
           border-radius: 25px;
-          margin-left: -14px;
+          margin-left: -16px;
+          margin-top: 2px;
         }
       }
 
       .tableVisible {
         display: block;
         width: fit-content;
-        
-
+        .anticon-unordered-list {
+          font-size: 26px !important;
+        }
         .header__iconShortCut {
           display: float;
           float: left;
@@ -118,7 +119,7 @@
       color: $black;
 
       li:first-child a,
-      li:hover>a {
+      li:hover > a {
         color: $blue;
       }
 

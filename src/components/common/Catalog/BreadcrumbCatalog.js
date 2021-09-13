@@ -4,7 +4,7 @@ import { Breadcrumb } from "antd";
 const BreadcrumbCatalog = () => {
   return (
     <>
-      <Breadcrumb separator=">" style={{ margin: "20px 0" }}>
+      <Breadcrumb separator=">">
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item href="">Laptops</Breadcrumb.Item>
         <Breadcrumb.Item href="">Everyday Use Notebooks</Breadcrumb.Item>
