@@ -39,10 +39,10 @@ const Catalog = () => {
             </Row>
             <Row className="catalogProduct__wrapProduct">
               <Switch>
-                <Route exact path="/all/list-grid">
+                <Route exact path="/catalog">
                   <ListCard />
                 </Route>
-                <Route exact path="/all/list-row">
+                <Route exact path="/catalog/list-row">
                   <ListProductCardRow />
                 </Route>
               </Switch>
