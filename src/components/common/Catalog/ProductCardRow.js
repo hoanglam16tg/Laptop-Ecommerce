@@ -30,8 +30,8 @@ const ProductCardRow = (props) => {
           <h2 className="productCardRow__content--title">{title}</h2>
           <p>{content}</p>
           <h2 className="productCardRow__content--price">
-            <s>${price}</s>
-            <b> ${price}</b>
+            <s>${price}.000</s>
+            <b> ${price}.000</b>
           </h2>
           <ButtonAddCard />
         </Col>

@@ -15,7 +15,7 @@ const menu = (
   </Menu>
 );
 
-const CatalogNav = () => {
+const CatalogNav = (props) => {
   const [visible, setVisible] = React.useState(false);
 
   const showDrawer = () => {
@@ -69,10 +69,10 @@ const CatalogNav = () => {
             </Dropdown>
           </div>
           <div className="icon">
-            <Link to="/catalog">
+            <Link onClick={props.handleIsShow}>
               <AppstoreOutlined className="icon--gridDisplay" />
             </Link>
-            <Link to="/catalog/list-row">
+            <Link onClick={props.handleIsShowRow}>
               <AlignLeftOutlined className="icon--rowDisplay" />
             </Link>
           </div>
