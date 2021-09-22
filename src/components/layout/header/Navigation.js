@@ -17,7 +17,7 @@ const Navigation = () => {
       <div className="tableHidden">
         <ul className="header__navigation--WrapItem">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link>Laptops</Link>
@@ -52,7 +52,7 @@ const Navigation = () => {
         />
         <Drawer title="Menu" placement="left" onClose={onClose} visible={visible}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link>Laptops</Link>

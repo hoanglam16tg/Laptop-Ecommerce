@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container wrap--heading">
         <div className="tableHidden ">
           <div className="header__logo">
-            <Link to="/">
+            <Link to="/home">
               <img src={LogoImage} alt="" />
             </Link>
           </div>

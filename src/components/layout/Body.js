@@ -5,12 +5,14 @@ import BodyDetails from '../common/BodyDetails/index';
 import ProductDetails from '../common/ProductDetails/index';
 import Contact from './Contact';
 import AboutUs from './AboutUs';
-import Catalog from "../common/Catalog/index"
+import Catalog from '../common/Catalog/index';
+import Landing from '../layout/Auth/Landing';
 
 const Body = () => {
   return (
     <>
       <Switch>
+        <Route exact path="/" component={Landing} />
         <Route exact path="/login">
           <Login />
         </Route>
@@ -29,10 +31,10 @@ const Body = () => {
         <Route path="/catalog">
           <Catalog />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/home">
           <BodyDetails />
         </Route>
-      </Switch>
+      </Switch> 
     </>
   );
 };

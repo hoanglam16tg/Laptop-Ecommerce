@@ -1,21 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
-import Slide from "../BodyDetails/Carousel";
-import ZipPay from "../BodyDetails/ZipPay";
-import IntroduceCard from "./IntroduceCard";
-import Branch from "./Branch";
-import Support from "../Support/index";
-import NewsOffer from "../NewsOffer/index";
-import CarouselNewProduct from "./CarouselNewProduct";
-import ProductCard from "./ProductCard";
-import { dataLaptop, dataCPU, dataScreen } from "./DataCard";
-
-import IntroduceImage1 from "../../../assets/images/Body/MSILaptops.png";
-import IntroduceImage2 from "../../../assets/images/Body/CustomeBuilds.png";
-import IntroduceImage3 from "../../../assets/images/Body/GamingMonitors.png";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import IntroduceImage2 from '../../../assets/images/Body/CustomeBuilds.png';
+import IntroduceImage3 from '../../../assets/images/Body/GamingMonitors.png';
+import IntroduceImage1 from '../../../assets/images/Body/MSILaptops.png';
+import { getApiDataScreen } from '../../../Redux/Reducer/productReducer';
+import Slide from '../BodyDetails/Carousel';
+import ZipPay from '../BodyDetails/ZipPay';
+import NewsOffer from '../NewsOffer/index';
+import Support from '../Support/index';
+import Branch from './Branch';
+import CarouselNewProduct from './CarouselNewProduct';
+import IntroduceCard from './IntroduceCard';
+import ProductCard from './ProductCard';
 
 const responsive = {
   desktop: {
@@ -32,15 +31,18 @@ const responsive = {
   },
 };
 
-const BodyDetails = () => {
-  const [listCard, setListCard] = React.useState({
-    Laptop: dataLaptop,
-    CPU: dataCPU,
-    Screen: dataScreen,
+const BodyDetails = (props) => {
+  const listProduct = useSelector((state) => {
+    return state.product.listProductLaptop;
   });
 
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(getApiDataScreen());
+  }, []);
+
   const listCardScreen = () => {
-    const newListScreen = listCard.Screen.map((item, index) => {
+    const newListScreen = listProduct.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
@@ -55,7 +57,7 @@ const BodyDetails = () => {
   };
 
   const listCardLaptop = () => {
-    const newListLaptop = listCard.Laptop.map((item, index) => {
+    const newListLaptop = listProduct.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
@@ -70,7 +72,7 @@ const BodyDetails = () => {
   };
 
   const listCardCPU = () => {
-    const newListCPU = listCard.CPU.map((item, index) => {
+    const newListCPU = listProduct.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
