@@ -43,6 +43,7 @@ const BodyDetails = () => {
     const newListScreen = listCard.Screen.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}
@@ -58,6 +59,7 @@ const BodyDetails = () => {
     const newListLaptop = listCard.Laptop.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}
@@ -73,6 +75,7 @@ const BodyDetails = () => {
     const newListCPU = listCard.CPU.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}

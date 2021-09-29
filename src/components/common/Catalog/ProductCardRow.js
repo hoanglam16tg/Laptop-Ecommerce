@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { Link } from "react-router-dom";
 import {
   CheckCircleOutlined,
   ExclamationCircleOutlined,
 } from "@ant-design/icons";
 import ButtonAddCard from "../Form/ButtonAddCard";
-
+import { Routing } from "../../../constants/Routing_common";
 import ProductParameters from "../../../assets/images/DetailProduct/Product parameters.png";
 import iconEmail from "../../../assets/images/Icon/iconEmail.png";
 import iconHeart from "../../../assets/images/Icon/iconHeart.png";
@@ -18,7 +19,9 @@ const ProductCardRow = (props) => {
       <Row className="productCardRow">
         <Col lg={{ span: 7 }} md={{ span: 7 }}>
           <div className="productCardRow__wrap--image">
-            <img src={src} alt={alt} />
+            <Link to={`${Routing.PRODUCTDETAIL}${props.id}`}>
+              <img src={src} alt={alt} />
+            </Link>
             Review
           </div>
         </Col>
@@ -27,7 +30,10 @@ const ProductCardRow = (props) => {
           md={{ span: 12 }}
           className="productCardRow__content"
         >
-          <h2 className="productCardRow__content--title">{title}</h2>
+          <Link to={`${Routing.PRODUCTDETAIL}${props.id}`}>
+            <h2 className="productCardRow__content--title">{title}</h2>
+          </Link>
+
           <p>{content}</p>
           <h2 className="productCardRow__content--price">
             <s>${price}.000</s>

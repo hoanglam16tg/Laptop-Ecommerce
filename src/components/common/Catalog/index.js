@@ -57,6 +57,7 @@ const Catalog = () => {
         {newListCard.slice(minValue, maxValue).map((item, index) => {
           return (
             <ProductCart
+              id={item.id}
               key={index}
               status={item.status}
               src={item.src}
@@ -75,6 +76,7 @@ const Catalog = () => {
         {newListCard.slice(minValue, maxValue).map((item, index) => {
           return (
             <ProductCardRow
+              id={item.id}
               key={index}
               status={item.status}
               src={item.src}

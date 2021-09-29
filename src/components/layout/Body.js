@@ -1,11 +1,12 @@
-import { Route, Switch } from 'react-router-dom';
-import Login from './Auth/Login';
-import CartPage from './CartPage';
-import BodyDetails from '../common/BodyDetails/index';
-import ProductDetails from '../common/ProductDetails/index';
-import Contact from './Contact';
-import AboutUs from './AboutUs';
-import Catalog from "../common/Catalog/index"
+import { Route, Switch } from "react-router-dom";
+import Login from "./Auth/Login";
+import CartPage from "./CartPage";
+import BodyDetails from "../common/BodyDetails/index";
+import ProductDetails from "../common/ProductDetails/index";
+import Contact from "./Contact";
+import AboutUs from "./AboutUs";
+import Catalog from "../common/Catalog/index";
+import { Routing } from "../../constants/Routing_common";
 
 const Body = () => {
   return (
@@ -17,7 +18,7 @@ const Body = () => {
         <Route path="/cart">
           <CartPage />
         </Route>
-        <Route path="/product-details">
+        <Route path={`${Routing.PRODUCTDETAIL}:id`}>
           <ProductDetails />
         </Route>
         <Route path="/contact">

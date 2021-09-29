@@ -4,8 +4,7 @@ import { Image } from "antd";
 import iconEmail from "../../../assets/images/Icon/iconEmail.png";
 import iconHeart from "../../../assets/images/Icon/iconHeart.png";
 import iconWave from "../../../assets/images/Icon/iconWave.png";
-import Image9 from "../../../assets/images/image 9.png";
-const ShowImage = () => {
+const ShowImage = (props) => {
   const [visible, setVisible] = React.useState(false);
 
   return (
@@ -25,7 +24,7 @@ const ShowImage = () => {
         preview={{ visible: false }}
         width={255}
         height={444}
-        src={Image9}
+        src={props.srcImage}
         onClick={() => setVisible(true)}
         style={{ marginTop: "15px" }}
       />
@@ -33,7 +32,7 @@ const ShowImage = () => {
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
-          <Image src={Image9} />
+          <Image src={props.srcImage} />
           <Image src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp" />
           <Image src="https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp" />
         </Image.PreviewGroup>
