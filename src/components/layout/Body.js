@@ -7,6 +7,7 @@ import Contact from './Contact';
 import AboutUs from './AboutUs';
 import Catalog from '../common/Catalog/index';
 import Landing from '../layout/Auth/Landing';
+import Admin from '../common/Admin/admin';
 
 const Body = () => {
   return (
@@ -15,6 +16,9 @@ const Body = () => {
         <Route exact path="/" component={Landing} />
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
         <Route path="/cart">
           <CartPage />
@@ -34,7 +38,7 @@ const Body = () => {
         <Route exact path="/home">
           <BodyDetails />
         </Route>
-      </Switch> 
+      </Switch>
     </>
   );
 };

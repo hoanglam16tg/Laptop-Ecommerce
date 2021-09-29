@@ -1,10 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-
 import ProductCard from "./ProductCard";
-import { dataLaptop, dataCPU, dataScreen } from "./DataCard";
+
 
 const responsive = {
   desktop: {
@@ -22,16 +22,21 @@ const responsive = {
 };
 
 const CarouselNewProduct = () => {
-  const [listCard, setListCard] = React.useState({
-    Laptop: dataLaptop,
-    CPU: dataCPU,
-    Screen: dataScreen,
+  
+  const listProductLaptop = useSelector((state) => {
+    return state.product.listProductLaptop;
+  });
+  const listProductCPU = useSelector((state) => {
+    return state.product.listProductCPU;
+  });
+  const listProductScreen = useSelector((state) => {
+    return state.product.listProductScreen;
   });
 
   const newListProduct = () => {
-    const listProductConcat = listCard.Laptop.concat(
-      listCard.CPU,
-      listCard.Screen
+    const listProductConcat = listProductLaptop.concat(
+      listProductCPU,
+      listProductScreen
     );
     const listProduct = listProductConcat.map((item, index) => {
       return (

@@ -65,7 +65,7 @@ const Header = () => {
           </Link>
 
           <Dropdown overlay={DropdownAccount} placement="bottomRight" arrow>
-            <Avatar size={36} icon={<UserOutlined />} />
+            <Avatar size={36} icon={<UserOutlined />}/>
           </Dropdown>
         </div>
       </div>

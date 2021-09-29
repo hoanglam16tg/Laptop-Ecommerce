@@ -5,33 +5,46 @@ import Support from '../../common/Support/index';
 import { itemRender, ROUTES } from '../../../constants/Routing_Register';
 import { API_KEY } from '../../../constants/API_Google.js';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { GetGmailApi, PostGmailApi } from '../../../Redux/Reducer/gmailReducer';
 
 const Login = () => {
+  const dispatch = useDispatch();
+
+  const listUser = useSelector((state) => {
+    // console.log('listUser ~ state', state);
+    return state.gmail.listUser;
+  });
+
+  React.useEffect(() => {
+    dispatch(GetGmailApi());
+    dispatch(PostGmailApi());
+  }, []);
+
+
   const clientId = API_KEY.Google;
+  const history = useHistory();
 
   const [showButton, setShowButton] = React.useState({
     Login: true,
     Logout: false,
   });
 
-  const history = useHistory();
-
   const [loginForm, setLoginForm] = React.useState({
     email: '',
     password: '',
   });
-
   const { email, password } = loginForm;
 
   const onChangeLoginForm = (event) =>
     setLoginForm({ ...loginForm, [event.target.name]: event.target.value });
 
   const onFinish = (values) => {
-    if (values.email === 'admin@gmail.com' && values.password === '123456') {
+    if (values.email === 'admin@gmail.com' && values.password === 'admin') {
       const token = { token: 'token-website', email: 'admin@gmail.com' };
       const TOKEN = 'token';
       localStorage.setItem(TOKEN, token.token);
-      history.push('/home');
+      history.push('/admin');
     } else {
       alert('Password or email incorrect !');
     }
@@ -41,7 +54,21 @@ const Login = () => {
   const onLoginSuccess = (res) => {
     console.log('Successfully logged in', res.profileObj);
     alert('you have been logged in successfully !!');
+    dispatch(
+      PostGmailApi(
+      {
+        email: res.profileObj.email,
+        familyName: res.profileObj.familyName,
+        givenName: res.profileObj.givenName, 
+        googleId: res.profileObj.googleId,
+        imageUrl: res.profileObj.imageUrl,
+        name: res.profileObj.name,
+      })
+    );
+    if(window.confirm('Do you want to go homepage ?')){
     history.push('/home');
+    }
+    dispatch(GetGmailApi());
     setShowButton({ Login: false, Logout: true });
   };
   const onFailureSuccess = (res) => {

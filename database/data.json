@@ -1,5 +1,5 @@
 {
-  "Laptop" : [
+  "Laptop": [
     {
       "status": "In Stock",
       "src": "https://lh3.googleusercontent.com/MaNYTTv-4gkgptnl12eLDeA-Q6GvFaQLwqwGrhRCk2atMwD1blGaBNITqaEE8EuYlrU_2k4f6jxY4f2tOZSy7JRzRgXgJ5U=rw-w300",
@@ -115,6 +115,26 @@
       "content": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
       "title": "Screen LCD LG 27'",
       "price": "350"
+    }
+  ],
+  "User": [
+    {
+      "email": "nguyentuankiet0105@gmail.com",
+      "familyName": "Nguyễn",
+      "givenName": "Tuấn Kiệt",
+      "googleId": "106207885588076281863",
+      "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GgQutp-T4dnewCY8it194zurGgogiv0BGLjER0_dA=s96-c",
+      "name": "Tuấn Kiệt Nguyễn",
+      "id": 1
+    },
+    {
+      "email": "nguyentuechau0705@gmail.com",
+      "familyName": "Nguyễn",
+      "givenName": "Tuệ Châu",
+      "googleId": "103938111086511760107",
+      "imageUrl": "https://lh3.googleusercontent.com/a/AATXAJwbYE90iME0swvANPuoDAdShWk71ngs6cm9y6q5=s96-c",
+      "name": "Tuệ Châu Nguyễn",
+      "id": 2
     }
   ]
 }

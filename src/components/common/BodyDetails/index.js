@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 import IntroduceImage2 from '../../../assets/images/Body/CustomeBuilds.png';
 import IntroduceImage3 from '../../../assets/images/Body/GamingMonitors.png';
 import IntroduceImage1 from '../../../assets/images/Body/MSILaptops.png';
-import { getApiDataScreen } from '../../../Redux/Reducer/productReducer';
+import {
+  getApiDataScreen,
+  getApiDataLaptop,
+  getApiDataCPU,
+} from '../../../Redux/Reducer/productReducer';
 import Slide from '../BodyDetails/Carousel';
 import ZipPay from '../BodyDetails/ZipPay';
 import NewsOffer from '../NewsOffer/index';
@@ -32,17 +36,28 @@ const responsive = {
 };
 
 const BodyDetails = (props) => {
-  const listProduct = useSelector((state) => {
+  // const {listProductLaptop, listProductCPU, listProductScreen} = state.product;
+
+  const listProductLaptop = useSelector((state) => {
     return state.product.listProductLaptop;
+  });
+  const listProductCPU = useSelector((state) => {
+    return state.product.listProductCPU;
+  });
+  const listProductScreen = useSelector((state) => {
+    return state.product.listProductScreen;
   });
 
   const dispatch = useDispatch();
   React.useEffect(() => {
+    dispatch(getApiDataLaptop());
     dispatch(getApiDataScreen());
+    dispatch(getApiDataCPU());
   }, []);
 
   const listCardScreen = () => {
-    const newListScreen = listProduct.map((item, index) => {
+    // console.log('listProductScreen', listProductScreen);
+    const newListScreen = listProductScreen.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
@@ -57,7 +72,8 @@ const BodyDetails = (props) => {
   };
 
   const listCardLaptop = () => {
-    const newListLaptop = listProduct.map((item, index) => {
+    // console.log('listProductLaptop', listProductLaptop);
+    const newListLaptop = listProductLaptop.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
@@ -72,7 +88,8 @@ const BodyDetails = (props) => {
   };
 
   const listCardCPU = () => {
-    const newListCPU = listProduct.map((item, index) => {
+    // console.log('listProductCPU', listProductCPU);
+    const newListCPU = listProductCPU.map((item, index) => {
       return (
         <ProductCard
           status={item.status}
