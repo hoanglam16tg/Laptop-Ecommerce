@@ -6,10 +6,11 @@ import {
 import { Button } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Routing } from '../../../constants/Routing_common';
 
 const ProductCard = (props) => {
   return (
-    <>
+    <div>
       <div className="productCard">
         {props.status === 'In Stock' ? (
           <h3 className="productCard__status--inStock">
@@ -23,10 +24,10 @@ const ProductCard = (props) => {
           </h3>
         )}
 
-        <Link to="/product-details">
+        <Link to={`${Routing.PRODUCTDETAIL}${props.id}`}>
           <img src={props.src} alt={props.alt} />
         </Link>
-        <Link to="/product-details">
+        <Link to={`${Routing.PRODUCTDETAIL}${props.id}`}>
           <h2 className="productCard__title">{props.title}</h2>
         </Link>
         <p>{props.content}...</p>
@@ -38,7 +39,7 @@ const ProductCard = (props) => {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default ProductCard;

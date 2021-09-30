@@ -17,6 +17,7 @@
       color: $gray;
       margin-right: 30px;
       transition: all 0.3s ease-in;
+      &:first-child,
       &:focus,
       &:hover {
         color: black;
@@ -68,11 +69,18 @@
         font-size: 12px;
         line-height: 18px;
       }
+      ul,
       p {
         font-weight: 300;
         font-size: 18px;
         line-height: 30px;
         margin-top: 24px;
+      }
+      ul {
+        margin: 24px 0 24px 23px;
+        li {
+          list-style-type: initial;
+        }
       }
     }
   }
@@ -88,6 +96,9 @@
         flex-direction: column;
         gap: 5px 0;
         margin: 36px 54px 0 23px;
+      }
+      .ant-image {
+        flex: 1;
       }
     }
   }

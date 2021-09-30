@@ -41,6 +41,7 @@ const CarouselNewProduct = () => {
     const listProduct = listProductConcat.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}

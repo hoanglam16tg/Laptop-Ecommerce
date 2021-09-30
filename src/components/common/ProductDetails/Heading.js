@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { InputNumber, Button } from "antd";
 
-const Heading = () => {
+const Heading = ({ onChangeAbout, onchangeDetails }) => {
   return (
     <div className="container">
       <div className="ProductDetails__navigation">
-        <Link to="/product-details/AboutProduct">About Product</Link>
-        <Link to="/product-details/ProductDetail">Details</Link>
+        <Link onClick={onChangeAbout}>About Product</Link>
+        <Link onClick={onchangeDetails}>Details</Link>
       </div>
 
       <div className="ProductDetails__addProduct">

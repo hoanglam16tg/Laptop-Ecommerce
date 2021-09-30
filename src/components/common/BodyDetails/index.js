@@ -60,6 +60,7 @@ const BodyDetails = (props) => {
     const newListScreen = listProductScreen.map((item, index) => {
       return (
         <ProductCard
+         id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}
@@ -72,10 +73,10 @@ const BodyDetails = (props) => {
   };
 
   const listCardLaptop = () => {
-    // console.log('listProductLaptop', listProductLaptop);
     const newListLaptop = listProductLaptop.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}
@@ -88,10 +89,10 @@ const BodyDetails = (props) => {
   };
 
   const listCardCPU = () => {
-    // console.log('listProductCPU', listProductCPU);
     const newListCPU = listProductCPU.map((item, index) => {
       return (
         <ProductCard
+          id={item.id}
           status={item.status}
           src={item.src}
           title={item.title}
