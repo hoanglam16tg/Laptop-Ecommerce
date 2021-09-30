@@ -1,30 +1,36 @@
-import React from "react";
-import { useParams } from "react-router-dom";
 import { Carousel } from "antd";
-
-import Heading from "./Heading";
-import AboutProductContent from "./AboutProductContent";
-import DetailProductContent from "./DetailProductContent";
-import ShowImage from "./ShowImage";
-import Support from "../../common/Support/index";
-import { dataLaptop, dataCPU, dataScreen } from "../BodyDetails/DataCard";
-
-import Image13 from "../../../assets/images/Group13.png";
+import React from "react";
+import { useSelector } from 'react-redux';
+import { useParams } from "react-router-dom";
 import banner from "../../../assets/images/DetailProduct/bannerDetail.png";
 import banner2 from "../../../assets/images/DetailProduct/bannerDetail2.png";
 import banner3 from "../../../assets/images/DetailProduct/bannerDetail3.png";
+import Image13 from "../../../assets/images/Group13.png";
+import Support from "../../common/Support/index";
+import AboutProductContent from "./AboutProductContent";
+import DetailProductContent from "./DetailProductContent";
+import Heading from "./Heading";
+import ShowImage from "./ShowImage";
+
+
 
 const ProductDetails = () => {
+
+  const listProductLaptop = useSelector((state) => {
+    return state.product.listProductLaptop;
+  });
+  const listProductCPU = useSelector((state) => {
+    return state.product.listProductCPU;
+  });
+  const listProductScreen = useSelector((state) => {
+    return state.product.listProductScreen;
+  });
   const [isShowAbout, setIsShowAbout] = React.useState(true);
   const [isShowDetail, setIsShowDetail] = React.useState(false);
   const { id } = useParams();
-  const [listCard, setListCard] = React.useState({
-    Laptop: dataLaptop,
-    CPU: dataCPU,
-    Screen: dataScreen,
-  });
+  
 
-  const listCardConcat = listCard.Laptop.concat(listCard.CPU, listCard.Screen);
+  const listCardConcat = listProductLaptop.concat(listProductCPU, listProductScreen);
   const newListCard = listCardConcat.filter((item) => item.id === parseInt(id));
 
   const aboutProduct = () => {

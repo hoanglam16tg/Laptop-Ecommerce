@@ -1,20 +1,74 @@
-import { Breadcrumb, Button, Form, Input, Row, Col } from "antd";
-import React from "react";
-import { GoogleLogin, GoogleLogout } from "react-google-login";
-import Support from "../../common/Support/index";
-import { itemRender, ROUTES } from "../../../constants/Routing_Register";
-import { API_KEY } from "../../../constants/API_Google.js";
+import { Breadcrumb, Button, Form, Input, Row, Col } from 'antd';
+import React from 'react';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import Support from '../../common/Support/index';
+import { itemRender, ROUTES } from '../../../constants/Routing_Register';
+import { API_KEY } from '../../../constants/API_Google.js';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { GetGmailApi, PostGmailApi } from '../../../Redux/Reducer/gmailReducer';
 
 const Login = () => {
+  const dispatch = useDispatch();
+
+  const listUser = useSelector((state) => {
+    // console.log('listUser ~ state', state);
+    return state.gmail.listUser;
+  });
+
+  React.useEffect(() => {
+    dispatch(GetGmailApi());
+    dispatch(PostGmailApi());
+  }, []);
+
+
   const clientId = API_KEY.Google;
+  const history = useHistory();
+
   const [showButton, setShowButton] = React.useState({
     Login: true,
     Logout: false,
   });
 
+  const [loginForm, setLoginForm] = React.useState({
+    email: '',
+    password: '',
+  });
+  const { email, password } = loginForm;
+
+  const onChangeLoginForm = (event) =>
+    setLoginForm({ ...loginForm, [event.target.name]: event.target.value });
+
+  const onFinish = (values) => {
+    if (values.email === 'admin@gmail.com' && values.password === 'admin') {
+      const token = { token: 'token-website', email: 'admin@gmail.com' };
+      const TOKEN = 'token';
+      localStorage.setItem(TOKEN, token.token);
+      history.push('/admin');
+    } else {
+      alert('Password or email incorrect !');
+    }
+  };
+
+  //----------------Check Gmail Login ------------------
   const onLoginSuccess = (res) => {
-    console.log("Successfully logged in", res.profileObj);
-    alert("you have been logged in successfully !!");
+    console.log('Successfully logged in', res.profileObj);
+    alert('you have been logged in successfully !!');
+    dispatch(
+      PostGmailApi(
+      {
+        email: res.profileObj.email,
+        familyName: res.profileObj.familyName,
+        givenName: res.profileObj.givenName, 
+        googleId: res.profileObj.googleId,
+        imageUrl: res.profileObj.imageUrl,
+        name: res.profileObj.name,
+      })
+    );
+    if(window.confirm('Do you want to go homepage ?')){
+    history.push('/home');
+    }
+    dispatch(GetGmailApi());
     setShowButton({ Login: false, Logout: true });
   };
   const onFailureSuccess = (res) => {
@@ -25,10 +79,6 @@ const Login = () => {
     if (isLogout) {
       setShowButton({ Login: true, Logout: false });
     }
-  };
-
-  const onFinish = (values) => {
-    console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -60,6 +110,8 @@ const Login = () => {
                 <Form.Item
                   label="Email"
                   name="email"
+                  value={email}
+                  onChange={onChangeLoginForm}
                   rules={[
                     {
                       required: true,
@@ -75,6 +127,8 @@ const Login = () => {
                 <Form.Item
                   label="Password"
                   name="password"
+                  value={password}
+                  onChange={onChangeLoginForm}
                   rules={[
                     {
                       required: true,
@@ -94,7 +148,7 @@ const Login = () => {
                   <a>Forgot Your Password?</a>
                 </Form.Item>
                 <Form.Item>
-                  {showButton.Login ? (
+                  {showButton.Login && (
                     <GoogleLogin
                       clientId={clientId}
                       buttonText="Login With Google"
@@ -102,14 +156,14 @@ const Login = () => {
                       onFailure={onFailureSuccess}
                       cookiePolicy={"single_host_origin"}
                     />
-                  ) : null}
-                  {showButton.Logout ? (
+                  )}
+                  {showButton.Logout && (
                     <GoogleLogout
                       clientId={clientId}
                       buttonText="Logout"
                       onLogoutSuccess={onSignOutSuccess}
                     ></GoogleLogout>
-                  ) : null}
+                  )}
                 </Form.Item>
               </Form>
             </div>

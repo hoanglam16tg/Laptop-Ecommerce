@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container wrap--heading">
         <div className="tableHidden ">
           <div className="header__logo">
-            <Link to="/">
+            <Link to="/home">
               <img src={LogoImage} alt="" />
             </Link>
           </div>
@@ -76,7 +76,7 @@ const Header = () => {
           </Link>
 
           <Dropdown overlay={DropdownAccount} placement="bottomRight" arrow>
-            <Avatar size={36} icon={<UserOutlined />} />
+            <Avatar size={36} icon={<UserOutlined />}/>
           </Dropdown>
         </div>
       </div>

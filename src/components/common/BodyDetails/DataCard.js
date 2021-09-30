@@ -138,6 +138,13 @@ export const dataLaptop = [
       "PSU 330W",
     ],
   },
+  {
+    status: "In Stock",
+    src: "https://lh3.googleusercontent.com/MaNYTTv-4gkgptnl12eLDeA-Q6GvFaQLwqwGrhRCk2atMwD1blGaBNITqaEE8EuYlrU_2k4f6jxY4f2tOZSy7JRzRgXgJ5U=rw-w300",
+    content: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    title: "Laptop Dell",
+    price: 700,
+  },
 ];
 export const dataCPU = [
   {
