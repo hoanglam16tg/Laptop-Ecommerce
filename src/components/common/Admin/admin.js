@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Admin = () => {
+ const Admin = () => {
   return (
-    <div style={{height: '500px', width: '100%'}}>
-      ADMIN PAGE
+    <div>
+      Admin page
     </div>
   )
 }
-export default Admin;
+export default Admin
