@@ -40,13 +40,11 @@ const Catalog = () => {
     setMinValue(0);
     setMaxValue(4);
   };
-
   const handleChange = (valueCurrent) => {
     if (valueCurrent <= 1) {
       setMinValue(0);
       setMaxValue(numEachPage);
     } else {
-      setMinValue(valueCurrent * numEachPage - numEachPage);
       setMaxValue(valueCurrent * numEachPage);
     }
   };

@@ -6,14 +6,19 @@ import ProductDetails from "../common/ProductDetails/index";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
 import Catalog from "../common/Catalog/index";
+import Landing from "../layout/Auth/Landing";
+import Admin from "../common/Admin/admin";
 import { Routing } from "../../constants/Routing_common";
-
 const Body = () => {
   return (
     <>
       <Switch>
+        <Route exact path="/" component={Landing} />
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
         <Route path="/cart">
           <CartPage />
@@ -30,7 +35,7 @@ const Body = () => {
         <Route path="/catalog">
           <Catalog />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/home">
           <BodyDetails />
         </Route>
       </Switch>

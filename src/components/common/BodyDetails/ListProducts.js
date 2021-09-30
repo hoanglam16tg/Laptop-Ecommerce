@@ -1,25 +1,32 @@
-import React from "react";
-import IntroduceCard from "./IntroduceCard";
-import ProductCard from "./ProductCard";
-import { dataLaptop } from "./DataCard";
+import React from 'react';
+import IntroduceCard from './IntroduceCard';
+import ProductCard from './ProductCard';
+import backgroundLaptop from '../../../assets/images/Body/MSILaptops.png';
+import { useSelector } from 'react-redux';
 
-import backgroundLaptop from "../../../assets/images/Body/MSILaptops.png";
+const ListProducts = (prosp) => {
+  
+  const listProduct = useSelector((state) => {
+    console.log('listProductLaptop ~ state', state);
+    return state.product.listProductLaptop;
+  });
+  console.log('listProduct ~ listProductLaptop', listProduct);
 
-const ListProducts = () => {
+  
   return (
     <div className="container">
+      <hr />
       <IntroduceCard srcImage={backgroundLaptop} title="MSI LapTop" />
-      {dataLaptop.map((item, index) => {
-        return (
+      {listProduct &&
+        listProduct.map((item) => (
           <ProductCard
             status={item.status}
             src={item.src}
-            title={item.title}
             content={item.content}
+            title={item.title}
             price={item.price}
           />
-        );
-      })}
+        ))}
     </div>
   );
 };
